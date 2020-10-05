@@ -42,7 +42,17 @@ s = requests.Session()
 data = {"username":"SPP", "password":"production"}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
 r = s.post(url, data=data)
+print(r.content)
+
+print('------------------ cut here -------------------')
 
 url = urllib.parse.urljoin(URLROOT, 'goform/getCustomConfig')
 r = s.post(url, data={'callback': 'callbackfunc'})
 print(r.content)
+`
+print('------------------ cut here -------------------')
+
+# url = urllib.parse.urljoin(URLROOT, 'goform/saveLayout')
+# headers = {'Content-Type': 'application/xml'}
+# r = s.post(url, data=layout1, headers=headers)
+# print(r.content)
