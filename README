@@ -1,0 +1,28 @@
+sppmacmini@SPPs-Mac-mini setspitmux % pyenv init
+# Load pyenv automatically by appending
+# the following to ~/.zshrc:
+
+eval "$(pyenv init -)"
+
+sppmacmini@SPPs-Mac-mini setspitmux % git@github.com:Schwarzschild/setspitmux.git
+zsh: no such file or directory: git@github.com:Schwarzschild/setspitmux.git
+sppmacmini@SPPs-Mac-mini setspitmux % eval "$(pyenv init -)"
+sppmacmini@SPPs-Mac-mini setspitmux %
+sppmacmini@SPPs-Mac-mini setspitmux % ls
+requirements.txt	setsplitmux.py		setsplitmux2.py
+sppmacmini@SPPs-Mac-mini setspitmux % python setsplitmux2.py
+Traceback (most recent call last):
+  File "setsplitmux2.py", line 4, in <module>
+    import requests
+ImportError: No module named requests
+sppmacmini@SPPs-Mac-mini setspitmux % pyenv shell setsplitmux
+pyenv: version `setsplitmux' not installed
+sppmacmini@SPPs-Mac-mini setspitmux % pyenv shell splitmux
+sppmacmini@SPPs-Mac-mini setspitmux % python setsplitmux2.py
+200
+b'{"code":  0, "msg": "layout saved"}'
+200
+{'code': 0, 'msg': 'layout saved'}
+sppmacmini@SPPs-Mac-mini setspitmux % pwd
+/Users/sppmacmini/Dropbox/LIVESTREAMING/TechnicalFiles/dev/setspitmux
+sppmacmini@SPPs-Mac-mini setspitmux %
