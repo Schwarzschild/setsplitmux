@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-cd $HOME/dev/splitmux
+cd $HOME/dev/setsplitmux
 SPLITMUXDIR=$HOME/Dropbox/LIVESTREAMING/TechnicalFiles/"SPLITMUX - CUSTOM LAYOUTS"
 
 
