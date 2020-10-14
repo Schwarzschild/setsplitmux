@@ -21,11 +21,12 @@ if len(sys.argv) != 2:
 
 fn = sys.argv[1]
 print(fn)
+
 fh = open(fn, 'r')
 layout = fh.read()
 print(layout)
 
-
+exit()
 URLROOT="http://192.168.10.12"
 data = {"username":"marc", "password":"marc"}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
