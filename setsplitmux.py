@@ -22,12 +22,15 @@ if len(sys.argv) != 2:
 fn = sys.argv[1]
 print(fn)
 
-with open(fn, 'r') as fh:
+try:
+    fh = open(fn, 'r')
     layout = fh.read()
-    print(layout)
-else:
-    print("Could not open configuration file.")
+except:
+    print("Cannot open configuration file: " + fn)
+    exit()
 
+print("Nah don't do anything.")
+exit()
 URLROOT="http://192.168.10.12"
 data = {"username":"marc", "password":"marc"}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
