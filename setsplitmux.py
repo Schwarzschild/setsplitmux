@@ -30,7 +30,7 @@ except:
     exit()
 
 print("Nah don't do anything.")
-exit()
+
 URLROOT="http://192.168.10.12"
 data = {"username":"marc", "password":"marc"}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
