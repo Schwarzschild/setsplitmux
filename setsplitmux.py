@@ -25,7 +25,7 @@ print(fn)
 with open(fn, 'r') as fh:
     layout = fh.read()
     print(layout)
-except:
+else:
     print("Could not open configuration file.")
 
 URLROOT="http://192.168.10.12"
