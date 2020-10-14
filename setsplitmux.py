@@ -29,8 +29,6 @@ except:
     print("Cannot open configuration file: " + fn)
     exit()
 
-print("Nah don't do anything.")
-
 URLROOT="http://192.168.10.12"
 data = {"username":"marc", "password":"marc"}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
