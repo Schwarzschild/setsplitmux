@@ -44,6 +44,6 @@ url = urllib.parse.urljoin(URLROOT, 'goform/saveLayout')
 headers = {'Content-Type': 'application/xml'}
 r = requests.post(url, data=layout, headers=headers, cookies = cookie)
 
-print(r.content)
-print(r.status_code)
-print(r.json())
+#print(r.content)
+#print(r.status_code)
+#print(r.json())
