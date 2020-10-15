@@ -1,28 +1,19 @@
-sppmacmini@SPPs-Mac-mini setspitmux % pyenv init
-# Load pyenv automatically by appending
-# the following to ~/.zshrc:
+The setsplitmux project should be located in ~/dev/setsplitmux
 
-eval "$(pyenv init -)"
+The program should be run like this:
 
-sppmacmini@SPPs-Mac-mini setspitmux % git@github.com:Schwarzschild/setspitmux.git
-zsh: no such file or directory: git@github.com:Schwarzschild/setspitmux.git
-sppmacmini@SPPs-Mac-mini setspitmux % eval "$(pyenv init -)"
-sppmacmini@SPPs-Mac-mini setspitmux %
-sppmacmini@SPPs-Mac-mini setspitmux % ls
-requirements.txt	setsplitmux.py		setsplitmux2.py
-sppmacmini@SPPs-Mac-mini setspitmux % python setsplitmux2.py
-Traceback (most recent call last):
-  File "setsplitmux2.py", line 4, in <module>
-    import requests
-ImportError: No module named requests
-sppmacmini@SPPs-Mac-mini setspitmux % pyenv shell setsplitmux
-pyenv: version `setsplitmux' not installed
-sppmacmini@SPPs-Mac-mini setspitmux % pyenv shell splitmux
-sppmacmini@SPPs-Mac-mini setspitmux % python setsplitmux2.py
-200
-b'{"code":  0, "msg": "layout saved"}'
-200
-{'code': 0, 'msg': 'layout saved'}
-sppmacmini@SPPs-Mac-mini setspitmux % pwd
-/Users/sppmacmini/Dropbox/LIVESTREAMING/TechnicalFiles/dev/setspitmux
-sppmacmini@SPPs-Mac-mini setspitmux %
+  $ setsplitmux.zsh <config file name>
+
+An example:
+
+  $ setsplitmux.zsh "2-shot C&D.xml"
+
+That xml config file was created and then export with SplitMux.
+
+It may be saved on your computer in Dropbox/LIVESTREAMING/TechnicalFiles/
+
+The location of those config files, the Splitmux username and password,
+and the IP address for the SplitMux appliance are all set in the setsplitmux.zsh file.
+
+You can change those settings with a text editor by changing them in setsplitmux.zsh.
+

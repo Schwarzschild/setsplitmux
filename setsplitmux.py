@@ -3,11 +3,20 @@
 #           All Rights Reserved.
 # Authors: Marc Schwarzschild
 
+import os
 import sys
 import urllib
 import requests
 import json
-import argparse
+
+ip = os.environ.get('SPLITMUX_IP')
+if not ip:
+    ip = '192.168.10.12'
+uname = os.environ.get('SPLITMUX_USER')
+pw = os.environ.get('SPLITMUX_PW')
+wd = os.environ.get('SPLITMUX_DIR')
+if not wd:
+    wd = ''
 
 # http://www.networktechinc.com/pdf/configure-splitmux-http-api.pdf
 # https://www.dropbox.com/personal/Splitmux
@@ -19,8 +28,7 @@ if len(sys.argv) != 2:
     print('You must supply a confuration XML file name.')
     exit()
 
-fn = sys.argv[1]
-print(fn)
+fn = os.path.join(wd, sys.argv[1])
 
 try:
     fh = open(fn, 'r')
@@ -29,14 +37,13 @@ except:
     print("Cannot open configuration file: " + fn)
     exit()
 
-URLROOT="http://192.168.10.12"
-data = {"username":"marc", "password":"marc"}
+URLROOT='http://' + ip
+data = {"username":uname, "password":pw}
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
 r = requests.post(url, data=data)
 print(r.status_code)
 result = json.loads(r.content.decode('utf-8'))
 
-#get session cookie and pass it with post request
 sessionId = result['cookie'][10:]
 cookie = {'sessionId': sessionId}
 
