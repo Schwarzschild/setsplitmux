@@ -40,6 +40,7 @@ except:
 
 URLROOT='http://' + ip
 data = {"username":uname, "password":pw}
+print('Marc debug data=', data)
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
 r = requests.post(url, data=data)
 print(r.status_code)
