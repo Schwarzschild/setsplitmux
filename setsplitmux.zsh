@@ -2,7 +2,7 @@
 
 export SPLITMUX_IP=192.168.10.12
 export SPLITMUX_DIR=$HOME/Dropbox/LIVESTREAMING/TechnicalFiles/"SPLITMUX - CUSTOM LAYOUTS"
-export SPLIMUX_USER=marc
+export SPLITMUX_USER=marc
 export SPLITMUX_PW=marc
 
 
