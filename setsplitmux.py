@@ -45,6 +45,7 @@ r = requests.post(url, data=data)
 print(r.status_code)
 result = json.loads(r.content.decode('utf-8'))
 
+print(dir(result))
 sessionId = result['cookie'][10:]
 cookie = {'sessionId': sessionId}
 
