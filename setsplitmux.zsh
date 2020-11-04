@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 export SPLITMUX_IP=192.168.10.12
-export SPLITMUXDIR=$HOME/Dropbox/LIVESTREAMING/TechnicalFiles/"SPLITMUX - CUSTOM LAYOUTS"
+export SPLITMUX_DIR=$HOME/Dropbox/LIVESTREAMING/TechnicalFiles/"SPLITMUX - CUSTOM LAYOUTS"
 export SPLIMUX_USER=marc
 export SPLITMUX_PW=marc
 
