@@ -29,6 +29,7 @@ if len(sys.argv) != 2:
     exit()
 
 fn = os.path.join(wd, sys.argv[1])
+print("MARC fn=", fn)
 
 try:
     fh = open(fn, 'r')
