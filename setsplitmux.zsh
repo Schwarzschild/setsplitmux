@@ -5,7 +5,7 @@ export SPLITMUX_DIR=$HOME/Dropbox/LIVESTREAMING/TechnicalFiles/"SPLITMUX - CUSTO
 export SPLITMUX_USER=marc
 export SPLITMUX_PW=marc
 
-
+export PYENV_ROOT="$HOME/.pyenv"
 cd $HOME/dev/setsplitmux
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
