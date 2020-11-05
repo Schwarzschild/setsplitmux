@@ -11,6 +11,6 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 pyenv shell splitmux
-# python setsplitmux.py $@
+python setsplitmux.py $@
 # python setsplitmux.py "2-shot C&D.xml"
-python setsplitmux.py "BBoy_3+1(usk).xml"
+# python setsplitmux.py "BBoy_3+1(usk).xml"
