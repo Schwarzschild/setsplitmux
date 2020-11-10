@@ -14,7 +14,7 @@ if not ip:
     ip = '192.168.10.12'
 uname = os.environ.get('SPLITMUX_USER')
 pw = os.environ.get('SPLITMUX_PW')
-wd = os.environ.get('SPLITMUX_DIR')
+wd = os.environ.get('SPLITMUX_LAYOUTDIR')
 if not wd:
     wd = ''
 
@@ -29,7 +29,6 @@ if len(sys.argv) != 2:
     exit()
 
 fn = os.path.join(wd, sys.argv[1])
-print("MARC fn=", fn)
 
 try:
     fh = open(fn, 'r')
@@ -40,13 +39,12 @@ except:
 
 URLROOT='http://' + ip
 data = {"username":uname, "password":pw}
-print('Marc debug data=', data)
+
 url = urllib.parse.urljoin(URLROOT, 'goform/login')
 r = requests.post(url, data=data)
-print(r.status_code)
+# print(r.status_code)
 result = json.loads(r.content.decode('utf-8'))
 
-print(dir(result))
 sessionId = result['cookie'][10:]
 cookie = {'sessionId': sessionId}
 
