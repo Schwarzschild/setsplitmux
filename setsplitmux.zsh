@@ -23,10 +23,10 @@ eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 pyenv shell splitmux
 
-echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.zsh.out
+echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
 
 
-$PCMD $SPLITMUX_DIR/setsplitmux.py $@
+$PCMD $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out
 # python setsplitmux.py "2-shot C&D.xml"
 # python setsplitmux.py "BBoy_3+1(usk).xml"
 

@@ -9,6 +9,9 @@ import urllib
 import requests
 import json
 
+print("Starting setsplitmux.py")
+
+
 ip = os.environ.get('SPLITMUX_IP')
 if not ip:
     ip = '192.168.10.12'
@@ -30,12 +33,16 @@ if len(sys.argv) != 2:
 
 fn = os.path.join(wd, sys.argv[1])
 
+print(fn)
+
 try:
     fh = open(fn, 'r')
     layout = fh.read()
 except:
     print("Cannot open configuration file: " + fn)
     exit()
+
+print(layout)
 
 URLROOT='http://' + ip
 data = {"username":uname, "password":pw}
