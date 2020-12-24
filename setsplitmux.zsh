@@ -28,6 +28,8 @@ pyenv shell splitmux
 
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
 
+pyenv versions >> $SPLITMUX_DIR/splitmux.out
+which python  >> $SPLITMUX_DIR/splitmux.out
 pip freeze >> $SPLITMUX_DIR/splitmux.out
 
 python $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out 2>$SPLITMUX_DIR/splitmux.err
