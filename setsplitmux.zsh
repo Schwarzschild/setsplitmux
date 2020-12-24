@@ -22,7 +22,8 @@ eval "$(pyenv init -)"
 export VIRTUAL_ENV=""
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-pyenv shell splitmux
+#pyenv shell splitmux
+pyenv activate splitmux
 
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
 
