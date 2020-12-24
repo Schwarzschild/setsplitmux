@@ -10,17 +10,23 @@ if [[ $HOST == "mm" ]]
 then
   export SPLITMUX_DIR=$HOME/Documents/dev/setsplitmux
   export SPLITMUX_LAYOUTDIR=$SPLITMUX_DIR/ConfigFiles
+  export PCMD=$HOME/.pyenv/versions/3.8.2/envs/splitmux/bin/python
+else
+  export PCMD=$HOME/.pyenv/shims/python
 fi
 
 export PYENV_ROOT="$HOME/.pyenv"
 
 cd $SPLITMUX_DIR
+
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 pyenv shell splitmux
 
 echo "About to run setsplitmux.py"
-python ./setsplitmux.py $@
+
+
+$PCMD $SPLITMUX_DIR/setsplitmux.py $@
 # python setsplitmux.py "2-shot C&D.xml"
 # python setsplitmux.py "BBoy_3+1(usk).xml"
 
