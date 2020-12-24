@@ -26,6 +26,7 @@ pyenv shell splitmux
 
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
 
+pip freeze >> $SPLITMUX_DIR/splitmux.out
 
 python $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out 2>$SPLITMUX_DIR/splitmux.err
 # python setsplitmux.py "2-shot C&D.xml"
