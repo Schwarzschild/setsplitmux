@@ -30,4 +30,4 @@ $PCMD $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out 2>$SPLITMUX_
 # python setsplitmux.py "2-shot C&D.xml"
 # python setsplitmux.py "BBoy_3+1(usk).xml"
 
-echo "Finished." > splitmux.out
+echo "Finished." >> splitmux.out
