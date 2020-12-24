@@ -19,8 +19,9 @@ cd $SPLITMUX_DIR
 
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 export VIRTUAL_ENV=""
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
 pyenv shell splitmux
 
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
