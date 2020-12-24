@@ -13,6 +13,7 @@ then
   export PCMD=$HOME/.pyenv/versions/3.8.2/envs/splitmux/bin/python
 else
   export PCMD=$HOME/.pyenv/shims/python
+  source $HOME/.zshrc
 fi
 
 cd $SPLITMUX_DIR
