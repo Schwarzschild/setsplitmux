@@ -26,8 +26,8 @@ pyenv shell splitmux
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
 
 
-$PCMD $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out
+$PCMD $SPLITMUX_DIR/setsplitmux.py $@ >> $SPLITMUX_DIR/splitmux.out 2>$SPLITMUX_DIR/splitmux.err
 # python setsplitmux.py "2-shot C&D.xml"
 # python setsplitmux.py "BBoy_3+1(usk).xml"
 
-echo "Finished."
+echo "Finished." > splitmux.out
