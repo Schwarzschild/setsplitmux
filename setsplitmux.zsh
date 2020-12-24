@@ -15,12 +15,12 @@ else
   export PCMD=$HOME/.pyenv/shims/python
 fi
 
-export PYENV_ROOT="$HOME/.pyenv"
-
 cd $SPLITMUX_DIR
 
+export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+export VIRTUAL_ENV=""
 pyenv shell splitmux
 
 echo "About to run setsplitmux.py" > $SPLITMUX_DIR/splitmux.out
